@@ -1,0 +1,7 @@
+package com.example.eureka.dao;
+
+@Repository
+public class RatingRepository extends MongoRepository<Rating,String> {
+
+	
+}

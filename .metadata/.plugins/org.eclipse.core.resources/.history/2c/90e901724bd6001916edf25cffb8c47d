@@ -1,0 +1,52 @@
+package com.example.eureka.service;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.util.Assert;
+
+import com.example.eureka.domain.Book;
+import com.example.eureka.repository.BookRepository;
+
+@Service
+public class BookServiceImpl implements BookService {
+
+	private final Logger log = LoggerFactory.getLogger(getClass());
+	Book book;
+	
+	@Autowired
+	BookRepository bookRepository;
+	
+	public void createBook(List<Book> book) {
+		bookRepository.saveAll(book);
+	}
+	@Override
+	public Book findBookById(long id) {
+		return book;
+		
+		// TODO Auto-generated method stub
+	}
+
+	@Override
+	public Book updateBook(Book book, long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public List<Book> findAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteBook(long id) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

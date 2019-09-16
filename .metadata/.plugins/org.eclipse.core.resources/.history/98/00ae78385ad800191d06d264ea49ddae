@@ -1,0 +1,9 @@
+package com.example.eureka.controller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(value="/rating")
+public class RatingController {
+
+}

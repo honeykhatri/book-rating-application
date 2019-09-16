@@ -1,0 +1,7 @@
+server.port=8082
+spring.cloud.config.name=discovery
+
+spring.security.basic.enabled=true 
+spring.security.user.name=admin 
+spring.security.user.password=pwd 
+

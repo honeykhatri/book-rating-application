@@ -1,0 +1,4 @@
+
+spring.cloud.config.fail-fast=true
+spring.cloud.config.password=
+spring.cloud.config.username=

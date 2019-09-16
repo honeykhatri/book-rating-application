@@ -1,0 +1,6 @@
+package com.example.eureka.client;
+
+@FeignClient
+public interface RatingClient {
+
+}

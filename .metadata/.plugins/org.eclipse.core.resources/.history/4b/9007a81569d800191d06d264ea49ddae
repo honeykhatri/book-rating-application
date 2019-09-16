@@ -1,0 +1,10 @@
+spring.cloud.config.name=book-service
+spring.cloud.config.discovery.service-id=config
+spring.cloud.config.discovery.enabled=true
+spring.cloud.config.username=admin
+spring.cloud.config.password=pwd
+eureka.client.serviceUrl.defaultZone=
+
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=book-service

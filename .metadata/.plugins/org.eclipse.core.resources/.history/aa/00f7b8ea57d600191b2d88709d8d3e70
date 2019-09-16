@@ -1,0 +1,9 @@
+#application configuration
+server.port=8102
+#Local Mongo DB Configuration
+spring.data.mongodb.host=localhost
+spring.data.mongodb.port=27017
+spring.data.mongodb.database=book-application
+
+spring.application.admin.enabled=true
+spring.application.admin.jmx-name=org.springframework.boot:type=Admin,name=BookMsApplication # JMX name of the application admin MBean

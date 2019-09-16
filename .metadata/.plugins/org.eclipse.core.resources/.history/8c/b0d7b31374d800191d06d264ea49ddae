@@ -1,0 +1,23 @@
+package com.example.eureka.client;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import com.example.eureka.domain.Rating;
+
+@FeignClient("ratings")
+public interface RatingClient {
+
+	@GetMapping("/getRating")
+	List<Rating> getRating();
+
+	@PostMapping("/addRating")
+	Rating addRating(Rating rating);
+
+	@PutMapping("/updateRating")
+	Rating updateRating(Rating rating);
+}

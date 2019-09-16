@@ -1,0 +1,23 @@
+package com.example.eureka.service;
+
+import java.util.Collection;
+import java.util.Optional;
+
+import com.example.eureka.domain.Book;
+
+public interface BookService {
+
+	Collection<Book> getAllBooks();
+
+	Optional<Book> findBookById(long id);
+
+	void deleteBookById(long id);
+
+	void updateBook(Book book);
+
+	void deleteAllBooks();
+
+	void addBook(Book book);
+
+	
+}

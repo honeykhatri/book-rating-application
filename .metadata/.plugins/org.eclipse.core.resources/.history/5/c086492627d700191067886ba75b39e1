@@ -1,0 +1,6 @@
+spring.cloud.config.name=book-service
+spring.cloud.config.uri=http://localhost:8081
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+spring.cloud.config.username=configUser
+spring.cloud.config.password=configPassword

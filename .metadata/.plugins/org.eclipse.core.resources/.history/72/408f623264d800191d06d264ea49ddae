@@ -1,0 +1,9 @@
+server.port=8082
+spring.cloud.config.name=discovery
+
+#spring.security.basic.enabled=true
+spring.security.user.name=admin 
+spring.security.user.password=pwd 
+
+eureka.instance.hostname=localhost 
+eureka.client.service-url.defaultZone=http://admin:pwd@localhost:8081/eureka/

@@ -1,0 +1,25 @@
+package com.example.eureka.client;
+
+import com.example.eureka.domain.Rating;
+
+public class RatingClientImpl implements RatingClient {
+
+	@Override
+	public Rating getRating() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Rating addRating() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Rating updateRating() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

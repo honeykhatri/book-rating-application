@@ -1,0 +1,5 @@
+package com.example.eureka.controller;
+
+public class RatingController {
+
+}

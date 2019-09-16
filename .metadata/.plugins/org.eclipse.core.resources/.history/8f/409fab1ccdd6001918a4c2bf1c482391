@@ -1,0 +1,2 @@
+spring.cloud.config.name=EurekaDiscovery
+spring.cloud.config.uri=http://localhost:8101

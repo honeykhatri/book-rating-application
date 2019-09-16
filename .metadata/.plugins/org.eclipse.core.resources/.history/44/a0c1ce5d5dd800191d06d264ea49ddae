@@ -1,0 +1,13 @@
+package com.example.eureka.service;
+
+import com.example.eureka.domain.Rating;
+
+
+public interface RatingService {
+
+	void addRating(Rating rating);
+		
+		
+							
+
+						}

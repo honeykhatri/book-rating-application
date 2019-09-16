@@ -1,0 +1,7 @@
+package com.example.eureka.domain;
+
+public class Rating {
+ private String ratedId;
+ private String bookId;
+ private int stars;
+}

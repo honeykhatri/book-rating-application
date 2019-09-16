@@ -1,0 +1,11 @@
+package com.example.eureka.dao;
+
+import org.springframework.stereotype.Repository;
+import com.example.eureka.domain.Rating;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+@Repository
+public class RatingRepository implements MongoRepository<Rating,String> {
+
+	
+}

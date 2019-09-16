@@ -1,0 +1,5 @@
+package com.example.eureka.repository;
+
+public interface BookRepository {
+
+}

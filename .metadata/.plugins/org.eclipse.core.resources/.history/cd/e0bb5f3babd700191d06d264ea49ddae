@@ -1,0 +1,5 @@
+package com.example.eureka.domain;
+
+public class Rating {
+
+}

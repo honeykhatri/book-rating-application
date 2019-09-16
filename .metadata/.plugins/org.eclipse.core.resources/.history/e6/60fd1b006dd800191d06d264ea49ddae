@@ -1,0 +1,13 @@
+package com.example.eureka.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("ratings")
+public interface RatingClient {
+
+	Rating getRating();
+	
+	Rating addRating();
+	
+	Rating updateRating();
+}

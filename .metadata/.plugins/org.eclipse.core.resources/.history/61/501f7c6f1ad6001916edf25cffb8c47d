@@ -1,0 +1,13 @@
+package com.example.eureka.repository;
+
+import com.example.eureka.domain.Book;
+
+public class BookRepositoryImpl  {
+
+	public Book findByTitle(String title) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+
+}

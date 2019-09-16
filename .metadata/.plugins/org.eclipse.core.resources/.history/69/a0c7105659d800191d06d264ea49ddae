@@ -1,0 +1,30 @@
+package com.example.eureka.domain;
+
+public class Rating {
+	private String id;
+	private String bookId;
+	private int stars;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getBookId() {
+		return bookId;
+	}
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
+	}
+	public int getStars() {
+		return stars;
+	}
+	public void setStars(int stars) {
+		this.stars = stars;
+	}
+	@Override
+	public String toString() {
+		return "Rating [id=" + id + ", bookId=" + bookId + ", stars=" + stars + "]";
+	}
+	
+}

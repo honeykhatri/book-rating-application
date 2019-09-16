@@ -1,0 +1,47 @@
+package com.example.eureka.repository;
+
+import java.util.Collection;
+import java.util.Optional;
+
+import com.example.eureka.domain.Book;
+import com.example.eureka.service.BookService;
+
+public class BookRepositoryImpl implements BookService {
+
+	@Override
+	public Collection<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<Book> findBookById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteBookById(String id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void updateBook(Book book) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void deleteAllBooks() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void addBook(Book book) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,26 @@
+server:
+  port: 8081
+  
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          uri: file:///${user.home}/application-config
+  application:
+    name: config
+  security:
+    user:
+      name: configUser
+      password: configPassword
+      roles:
+      - SYSTEM
+eureka:
+  instance:    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    region: default
+    registry-fetch-interval-seconds: 5
+    service-url:
+      defaultZone: http://discUser:discPassword@localhost:8082/eureka/

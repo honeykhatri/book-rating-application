@@ -1,0 +1,5 @@
+package com.example.eureka.security;
+
+public class SecurityConfig {
+
+}

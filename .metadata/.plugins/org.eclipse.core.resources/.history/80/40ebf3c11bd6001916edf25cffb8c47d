@@ -1,0 +1,14 @@
+package com.example.eureka.repository;
+
+public class BookRepositoryImpl implements BookRepository {
+
+	@Override
+	public String findTitle() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+
+}

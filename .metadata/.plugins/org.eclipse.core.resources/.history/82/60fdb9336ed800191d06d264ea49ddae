@@ -1,0 +1,21 @@
+package com.example.eureka.client;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
+import com.example.eureka.domain.Rating;
+
+@FeignClient("ratings")
+public interface RatingClient implements MongoRepository<Rating,String> {
+	
+    @GetMapping("/getRating")
+	Rating getRating();
+	
+    @PostMapping("addRating")
+	Rating addRating();
+    
+	@PutMapping("updateRating")
+	Rating updateRating();
+}

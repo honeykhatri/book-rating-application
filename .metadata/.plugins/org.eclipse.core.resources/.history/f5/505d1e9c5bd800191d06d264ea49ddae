@@ -1,0 +1,17 @@
+package com.example.eureka.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.eureka.dao.RatingRepository;
+import com.example.eureka.domain.Rating;
+
+public class RatingServiceImpl implements RatingService {
+    
+	@Autowired
+	RatingRepository ratingRepository;
+	
+	public void addRating(Rating rating) {
+		ratingRepository.save(rating);
+	}
+	
+}

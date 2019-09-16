@@ -1,0 +1,96 @@
+package com.example.eureka.controller;
+
+import java.util.Collection;
+import java.util.Optional;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.eureka.domain.Book;
+import com.example.eureka.service.BookService;
+
+@RestController
+@RequestMapping("/books")
+public class BookController {
+	
+	private final Logger LOG = LoggerFactory.getLogger(getClass());
+	
+	@Autowired
+   private final BookService bookService; 
+   
+    
+	
+
+	@PostMapping(value="/add")
+	public String add(@RequestBody Book book){
+		LOG.info(" Adding new Book ");
+		bookService.addBook(book);
+		return " New Book Added Successfully";
+	}
+	
+	/**
+	 * Method to return all books
+	 * @return
+	 */
+	@GetMapping(value="/getAll")
+	public Collection<Book> getAllBooks(){
+		LOG.info("Getting all Books");
+		return bookService.getAllBooks();
+	}
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+    @GetMapping(value="/getById/{bookId}")
+	public Optional<Book> getById(@PathVariable(value="bookId") String id){
+    	LOG.debug("Getting Book with Book Id: {}.", id);
+    	return bookService.findBookById(id);
+	}
+	/**
+	 * 
+	 * @param id
+	 * @param book
+	 * @return
+	 */
+    @PutMapping(value="/update/{bookId}")
+	public String update(@PathVariable(value="bookId") String id, @RequestBody Book book) {
+		LOG.debug("Updating Book with Id: {}.",id);
+		bookService.updateBook(book);
+    	return "Book Update Successfully" + id ;
+		}
+	/**
+	 * Deletes Book with Book Id : id
+	 * @param id
+	 * @return
+	 */
+    @DeleteMapping(value="/delete/{bookId}")
+	public String delete(@PathVariable(value="bookId") String id) {
+    	LOG.debug("Deleting Book with Book Id: {}.",id);
+    	bookService.deleteBookById(id);
+		return "Book with Book Id:" + id +"deleted";
+		
+	}
+    /**
+     * Deletes All the Books
+     * @return
+     */
+    @DeleteMapping(value="/delete")
+    public String deleteAll() {
+    	LOG.debug("Deleting All Books");
+    	bookService.deleteAllBooks();
+		return "All Books Deleted Successfully";
+    	
+    }
+	
+	
+}

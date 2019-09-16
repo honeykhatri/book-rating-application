@@ -1,0 +1,5 @@
+package com.example.eureka.repo;
+
+public interface RatingRepository {
+
+}

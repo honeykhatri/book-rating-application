@@ -1,0 +1,15 @@
+package com.example.eureka.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.eureka.domain.Rating;
+
+@Service
+public interface RatingService {
+
+	void addRating(Rating rating);
+		
+		
+							
+
+						}

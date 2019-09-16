@@ -1,0 +1,28 @@
+package com.example.eureka.repository;
+
+import java.util.Optional;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import com.example.eureka.domain.Book;
+
+import antlr.collections.List;
+
+@Repository
+public interface BookRepository extends MongoRepository<Book , String> {
+	public Book addNewBook();
+	
+	public void deleteBookById(long id);
+	
+	public List findAllBooks();
+		
+	Book updateBookById(long id);
+	
+    public String findTitle();
+
+	public Book findOne(long id);
+
+	public Optional<Book> findById(long id);
+    
+}

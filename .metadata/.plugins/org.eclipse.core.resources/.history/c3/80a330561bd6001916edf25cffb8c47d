@@ -1,0 +1,20 @@
+package com.example.eureka.repository;
+
+import com.example.eureka.domain.Book;
+
+import antlr.collections.List;
+
+public interface BookRepository {
+	public Book addNewBook();
+	
+	public void deleteBookById(Id id);
+	
+	public List findAllBooks();
+	
+	Book findBookById(Id id);
+	
+	Book updateBookById(Id id);
+	
+    public String findTitle();
+    
+}
